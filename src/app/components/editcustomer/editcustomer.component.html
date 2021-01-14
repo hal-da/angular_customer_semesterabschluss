@@ -1,0 +1,15 @@
+<div *ngIf="showEditDiv" class="component">
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+    <input id="float-input" name="firstName"  [ngModel]="actualCustomer.firstName" required type="text" pInputText placeholder="First Name">
+    <input id="float-input"name="lastName" [ngModel]="actualCustomer.lastName" required type="text" pInputText placeholder="Last Name">
+    <p-calendar name="birthday"
+    required
+    [(ngModel)]="actualCustomer.birthday"
+    [monthNavigator]="true"
+    [yearNavigator]="true"
+    yearRange="1900:2020"></p-calendar>
+    <p-checkbox name="active" [ngModel]="actualCustomer.active" required label="active" [binary]="true" ></p-checkbox>
+    <button pButton type="submit" label="submit"></button>
+    <button pButton type="submit" label="cancel" (click)="cancel()"></button>
+  </form>
+</div>

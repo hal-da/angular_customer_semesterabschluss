@@ -1,0 +1,11 @@
+<div class="component">
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+    <input id="float-input" name="firstName" ngModel required type="text" pInputText placeholder="First Name">
+    <input id="float-input"name="lastName" ngModel required type="text" pInputText placeholder="Last Name">
+    <p-calendar name="birthday" ngModel required  placeholder="Birthday" [(ngModel)]="value" dateFormat="yy-mm-dd"[monthNavigator]="true" [yearNavigator]="true" yearRange="1900:2020"(ngModelChange)="logChange()"></p-calendar>
+    <p-checkbox name="active" ngModel required label="active" [binary]="true" ></p-checkbox>
+    <button pButton type="submit" label="add"></button>
+  </form>
+</div>
+
+

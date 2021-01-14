@@ -1,0 +1,12 @@
+tr:nth-child(2n) {
+  background-color: #dddddd;
+}
+i:hover {
+  cursor: pointer;
+}
+.inactive {
+  color: red;
+}
+.active {
+  color: #46a049;
+}

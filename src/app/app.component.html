@@ -1,0 +1,3 @@
+<app-addcustomer (ok)="list.refresh()"></app-addcustomer>
+<app-customerlist #list (id)="edit.editCustomer($event)"></app-customerlist>
+<app-editcustomer #edit (changedCustomer)="list.refresh()"></app-editcustomer>
